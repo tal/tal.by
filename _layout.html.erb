@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tal Talk</title>
+  <link rel="stylesheet" href="/styles/app.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <h1 class="page-title">
+      Tal <br />
+      Talk
+    </h1>
+
+    <section class="external-links nav-item-collection">
+      <div class="nav-header">
+        say hi
+      </div>
+
+      <a class="nav-item twitter" href="https://twitter.com/Koalemos">
+        <i class="icon-twitter"></i> @Koalemos
+      </a>
+      <a class="nav-item email" href="mailto:me@tal.by">
+        <i class="icon-envelope"></i> me@tal.by
+      </a>
+    </section>
+
+    <section class="external-links nav-item-collection">
+      <div class="nav-header">
+        my stuff
+      </div>
+
+      <a class="nav-item tumblr" href="http://t.tal.by">
+        <i class="icon-tumblr2"></i> tumblr
+      </a>
+      <a class="nav-item github" href="https://github.com/tal">
+        <i class="icon-github"></i> github
+      </a>
+      <a class="nav-item instagram" href="https://instagram.com/tal">
+        <i class="icon-instagram"></i> instagram
+      </a>
+    </section>
+  </nav>
+
+  <section class="content">
+    <%= yield %>
+  </section>
+</body>
+</html>

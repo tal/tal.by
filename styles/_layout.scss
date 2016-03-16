@@ -1,0 +1,128 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.4;
+  background: $dark-grey;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: $blue-color;
+  text-shadow: none;
+  color: white;
+}
+
+::selection {
+  background: $blue-color;
+  text-shadow: none;
+  color: white;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.nav {
+  height: 100%;
+  width: 200px;
+  background: $blue-color;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  color: rgba(255,255,255,0.9);
+  background: $dark-grey;
+  display: flex;
+  justify-content: center;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  @include transition (all 200ms ease-in-out);
+  border-bottom: 1px solid rgba(0,0,0,0);
+
+  &:hover {
+    border-bottom: 1px solid rgba(255,255,255,1);
+  }
+}

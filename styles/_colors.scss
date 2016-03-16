@@ -1,0 +1,18 @@
+// http://color.hailpixel.com/#009DD1,A43C37,37A442,A4A437,376AA4,69349D,
+
+$lighten-by: 45%;
+
+$dark-grey: #353535;
+$lighter-grey: #3F3F3F;
+$body-text: #AAAAAA;
+$body-em: #FFF;
+$body-hide: rgba(255,255,255,0.2);
+
+$blue-color: #009ACF;
+$blue-light-color: lighten($blue-color, $lighten-by);
+$red-color: #A43C37;
+$red-light-color: lighten($red-color, $lighten-by);
+$yellow-color: #A4A437;
+$yellow-light-color: lighten($yellow-color, $lighten-by);
+$purple-color: #69349D;
+$purple-light-color: lighten($purple-color, $lighten-by);

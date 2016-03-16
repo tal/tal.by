@@ -1,0 +1,39 @@
+.nav .page-title {
+  @extend .in-nav-collection;
+}
+
+.nav-item-collection {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 12px;
+}
+
+.in-nav-collection {
+  color: $blue-light-color;
+  padding: 3px 12px;
+}
+
+.nav-header {
+  @extend .in-nav-collection;
+
+  font-variant: small-caps;
+  margin-bottom: -3px;
+
+  width: 100%;
+}
+
+.nav-item {
+  @extend .in-nav-collection;
+
+  width: 100%;
+
+  &:hover {
+    color: white;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    font-size: 90%;
+    margin-right: 3px;
+  }
+}
