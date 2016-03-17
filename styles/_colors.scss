@@ -4,6 +4,8 @@ $lighten-by: 45%;
 
 $dark-grey: #353535;
 $lighter-grey: #3F3F3F;
+$lighter-lighter-grey: lighten($lighter-grey, $lighten-by);
+
 $body-text: #AAAAAA;
 $body-em: #FFF;
 $body-hide: rgba(255,255,255,0.2);
