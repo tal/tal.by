@@ -1,3 +1,14 @@
+.post-time {
+  display: block;
+  position: relative;
+  margin: 0 -10px 20px;
+  text-indent: 40px;
+  font-size: 24px;
+
+  border: 1px solid $red-color;
+  border-width: 0 0 2px 0;
+}
+
 .blog-post {
   width: 730px;
   height: 100%;

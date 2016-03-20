@@ -4,10 +4,10 @@
 
 .about-me {
   background: $lighter-grey;
-  padding: 30px 40px;
+  // padding: 30px 40px;
   font-size: 20px;
   position: relative;
-  width: 700px;
+  width: 730px;
 
   padding: 10px 0 30px 30px;
   border-radius: 0 0 4px 4px;
@@ -40,5 +40,11 @@
   .header-content {
     $padding: 12px;
     padding: $padding $padding $padding $padding+190px;
+  }
+}
+
+.blog-post-page {
+  .about-me {
+    margin-bottom: 80px;
   }
 }
