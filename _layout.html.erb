@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tal Talk</title>
+  <% if title %>
+    <title><%= title %> - Tal Talk</title>
+  <% else %>
+    <title>Tal Talk</title>
+  <% end %>
   <link rel="stylesheet" href="/styles/app.css" />
 </head>
 <body>
@@ -9,9 +13,26 @@
   <nav class="nav">
     <div class="nav-content">
     <h1 class="page-title">
-      Tal <br />
-      Talk
+      <a href="/">
+        Tal <br />
+        Talk
+      </a>
     </h1>
+
+    <section class="external-links nav-item-collection">
+      <div class="nav-header">
+        bloggin'
+      </div>
+      <a class="nav-item" href="/blog">
+        <i class="icon-tags"></i> all
+      </a>
+      <a class="nav-item" href="/blog/tech">
+        <i class="icon-tag"></i> tech
+      </a>
+      <a class="nav-item" href="/blog/coding">
+        <i class="icon-tag"></i> coding
+      </a>
+    </section>
 
     <section class="external-links nav-item-collection">
       <div class="nav-header">

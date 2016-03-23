@@ -1,10 +1,6 @@
 <%
 if current_page && current_page.published?
-  date_str = if current_page.published_at > (Time.now - 31556926)
-    current_page.published_at.stamp('March 8th')
-  else
-    current_page.published_at.stamp('March 8th, 2013')
-  end
+  date_str = current_page.ts_string
 end
 %>
 

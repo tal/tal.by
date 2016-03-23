@@ -1,5 +1,5 @@
 # The dark side of style guides
-## Or how I learned to stop worrying and let people write how they want
+## Or, how I learned to stop worrying and let people write how they want
 
 When you look at the majority of a style guide, I don't think that the benefits come anywhere close to being worth the costs.
 

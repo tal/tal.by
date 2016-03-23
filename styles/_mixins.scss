@@ -8,3 +8,10 @@ $break-size: 760px+300px;
     @media only screen and (min-width: $break-size) { @content; }
   }
 }
+
+@mixin remove-hover-effect() {
+  border: none;
+  &:hover {
+    border: none;
+  }
+}
