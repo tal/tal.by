@@ -1,0 +1,7 @@
+[build]
+  publish = "public"
+  command = "yarn run build"
+  functions = "src/functions"
+
+[dev]
+  command = "yarn run start"
