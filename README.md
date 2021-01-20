@@ -1,4 +1,3 @@
-# tal.by site definition
+# tal.by v2
 
-This is the source for my home page. It's built using a static site generator I've built
-and hope to open source soon.
+Using eleventy instead of site-fs.

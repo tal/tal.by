@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="blog-post-page">
+  <div class="about-me">
+    <div class="hello">Hello, my name is</div>
+    <img alt="Picute of me!" class="me" height="190" src="/img/ears.png" width="190" />
+    <div class="name">Tal Atlas</div>
+    <div class="header-content">
+      <p>
+        I build stuff, currently <a href="http://tumblr.com">tumblr</a>. In the past also worked on Delight, <a href="http://giltcity.com">Gilt City</a>, and <a href="https://en.wikipedia.org/wiki/OMGPop">OMGPOP</a>.
+      </p>
+
+      <p>
+        Here I write about some of my favorite things: <a href="/blog/tech">tech</a>, <a href="/blog/hockey">hockey</a>, and <a href="/blog/dev">programming</a>, with some <a href="/blog/entertainment">tv/movies</a> sprinkled in.
+      </p>
+    </div>
+  </div>
+
+  {% if date_str %}
+    <time class="post-time">
+      <!-- July 12th, 2013 -->
+      {{ date_str }}
+    </time>
+  {% endif %}
+
+  <article class="blog-post">
+    <section class="post-body">
+      {{ content | safe }}
+    </section>
+  </article>
+</section>

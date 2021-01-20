@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+---
+
+{% if not description and tag %}
+{% set description = tagDescriptions[tag] %}
+{% endif %}
+
+<section class="content-column">
+
+  <div class="page-description">
+    {% if renderData.title %}
+      <h1 class="page-title">{{ renderData.title }}</h1>
+    {% else %}
+      <h1 class="page-title">{{ title }}</h1>
+    {% endif %}
+    <p class="page-content-description">
+      {{ description }}
+    </p>
+  </div>
+
+  <div class="post-list">
+    {{ content | safe }}
+  </div>
+</section>

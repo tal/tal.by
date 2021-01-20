@@ -1,0 +1,25 @@
+---
+layout: layouts/post-list.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: '/blog/{{ tag }}/'
+renderData:
+  title: '{{ tag | capitalize }}'
+---
+
+{% set taglist = collections[ tag ] %}
+{% for post in taglist | reverse %}
+<a class="post" href="{{ post.url | url }}">
+  <div class="title">
+    {{ post.data.title }}
+  </div>
+
+  {% if post.data.subtitle %}
+    <div class="subtitle">
+      {{ post.data.subtitle }}
+    </div>
+  {% endif %}
+</a>
+{%- endfor -%}

@@ -1,0 +1,25 @@
+---
+title: Blog
+layout: layouts/post-list.njk
+description: All posts about any subject. Check out the tag pages for specific types of posts.
+---
+
+{% if collections._blog | length %}
+  {%- for post in collections._blog -%}
+  <a class="post" href="{{ post.url }}">
+    <div class="title">
+      {{ post.data.title }}
+    </div>
+
+    {% if post.data.subtitle %}
+      <div class="subtitle">
+        {{ post.data.subtitle }}
+      </div>
+    {% endif %}
+  </a>
+  {%- endfor -%}
+{% else %}
+  <div>
+    No Posts
+  </div>
+{% endif %}
