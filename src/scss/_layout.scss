@@ -137,10 +137,10 @@ p:last-child {
 a {
   color: white;
   text-decoration: none;
-  transition: all 200ms ease-in-out;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 
   &:hover {
+    transition: all 200ms ease-in-out;
     border-bottom: 1px solid rgba(255, 255, 255, 1);
   }
 }

@@ -34,8 +34,11 @@
     color: white;
   }
 
-  [class^="icon-"], [class*=" icon-"] {
+  [class^='icon-'],
+  [class*=' icon-'] {
     font-size: 90%;
     margin-right: 3px;
+    width: 18px;
+    display: inline-block;
   }
 }
