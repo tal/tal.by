@@ -100,6 +100,7 @@ body {
   @include respond-to(handhelds) {
     flex-direction: column;
     flex-wrap: wrap;
+    display: block;
   }
 }
 
@@ -116,13 +117,29 @@ body {
   }
 
   @include respond-to(handhelds) {
-    width: 100%;
+    width: 0;
     height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 
     .nav-content {
-      position: relative;
+      position: fixed;
       width: 100%;
       height: auto;
+      padding-bottom: 0;
+      top: 0;
+      left: 0;
+    }
+
+    .nav-menu-items {
+      display: none;
+    }
+
+    &.menu-open .nav-menu-items {
+      display: block;
       padding-bottom: 16px;
     }
   }
@@ -137,7 +154,9 @@ body {
   justify-content: center;
 
   @include respond-to(handhelds) {
-    padding: 0 16px;
+    padding: 70px 16px 0;
+    width: 100%;
+    min-height: 100vh;
   }
 }
 

@@ -1,9 +1,57 @@
+.nav-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond-to(handhelds) {
+    padding: 0;
+  }
+}
+
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 16px;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10;
+
+  @include respond-to(handhelds) {
+    display: flex;
+  }
+
+  .hamburger-icon {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &:hover .hamburger-icon {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
 .nav .page-title {
   @extend .in-nav-collection;
 
   @include respond-to(handhelds) {
     font-size: 1.5em;
     padding: 16px;
+    margin: 0;
+
+    a {
+      display: flex;
+      gap: 0.3em;
+      align-items: center;
+    }
+
+    br {
+      display: none;
+    }
   }
 }
 

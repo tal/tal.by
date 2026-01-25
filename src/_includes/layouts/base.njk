@@ -21,61 +21,85 @@
 
   <nav class="nav">
     <div class="nav-content">
-    <h1 class="page-title">
-      <a href="/">
-        Tal <br />
-        Talk
-      </a>
-    </h1>
+    <div class="nav-header-bar">
+      <h1 class="page-title">
+        <a href="/">
+          Tal <br />
+          Talk
+        </a>
+      </h1>
+      <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger-icon"></span>
+        <span class="hamburger-icon"></span>
+        <span class="hamburger-icon"></span>
+      </button>
+    </div>
 
-    <section class="external-links nav-item-collection">
-      <div class="nav-header">
-        bloggin'
-      </div>
-      <a class="nav-item" href="/blog">
-        <i class="icon-tags"></i> all
-      </a>
-      <a class="nav-item" href="/blog/tech">
-        <i class="icon-tag"></i> tech
-      </a>
-      <a class="nav-item" href="/blog/coding">
-        <i class="icon-tag"></i> coding
-      </a>
-    </section>
+    <div class="nav-menu-items">
+      <section class="external-links nav-item-collection">
+        <div class="nav-header">
+          bloggin'
+        </div>
+        <a class="nav-item" href="/blog">
+          <i class="icon-tags"></i> all
+        </a>
+        <a class="nav-item" href="/blog/tech">
+          <i class="icon-tag"></i> tech
+        </a>
+        <a class="nav-item" href="/blog/coding">
+          <i class="icon-tag"></i> coding
+        </a>
+      </section>
 
-    <section class="external-links nav-item-collection">
-      <div class="nav-header">
-        say hi
-      </div>
+      <section class="external-links nav-item-collection">
+        <div class="nav-header">
+          say hi
+        </div>
 
-      <a class="nav-item twitter" href="https://twitter.com/Koalemos">
-        <i class="icon-twitter"></i> @Koalemos
-      </a>
-      <a class="nav-item email" href="mailto:me@tal.by">
-        <i class="icon-envelope"></i> me@tal.by
-      </a>
-    </section>
+        <a class="nav-item twitter" href="https://twitter.com/Koalemos">
+          <i class="icon-twitter"></i> @Koalemos
+        </a>
+        <a class="nav-item email" href="mailto:me@tal.by">
+          <i class="icon-envelope"></i> me@tal.by
+        </a>
+      </section>
 
-    <section class="external-links nav-item-collection">
-      <div class="nav-header">
-        my stuff
-      </div>
+      <section class="external-links nav-item-collection">
+        <div class="nav-header">
+          my stuff
+        </div>
 
-      <a class="nav-item tumblr" href="http://t.tal.by">
-        <i class="icon-tumblr2"></i> tumblr
-      </a>
-      <a class="nav-item github" href="https://github.com/tal">
-        <i class="icon-github"></i> github
-      </a>
-      <a class="nav-item instagram" href="https://instagram.com/tal">
-        <i class="icon-instagram"></i> instagram
-      </a>
-    </section>
+        <a class="nav-item tumblr" href="http://t.tal.by">
+          <i class="icon-tumblr2"></i> tumblr
+        </a>
+        <a class="nav-item github" href="https://github.com/tal">
+          <i class="icon-github"></i> github
+        </a>
+        <a class="nav-item instagram" href="https://instagram.com/tal">
+          <i class="icon-instagram"></i> instagram
+        </a>
+      </section>
+    </div>
     </div>
   </nav>
 
   <section class="content">
     {{ content | safe }}
   </section>
+
+  <script>
+    (function() {
+      const hamburger = document.querySelector('.hamburger-menu');
+      const nav = document.querySelector('.nav');
+
+      if (hamburger) {
+        hamburger.addEventListener('click', function() {
+          nav.classList.toggle('menu-open');
+          const isOpen = nav.classList.contains('menu-open');
+          hamburger.setAttribute('aria-expanded', isOpen);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
