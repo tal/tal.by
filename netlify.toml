@@ -3,5 +3,8 @@
   command = "yarn run build"
   functions = "src/functions"
 
+[build.environment]
+  NODE_VERSION = "22"
+
 [dev]
   command = "yarn run start"
