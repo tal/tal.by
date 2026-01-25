@@ -96,6 +96,11 @@ body {
 body {
   display: flex;
   flex-wrap: nowrap;
+
+  @include respond-to(handhelds) {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
 .nav {
@@ -109,6 +114,18 @@ body {
     width: $width;
     background: $blue-color;
   }
+
+  @include respond-to(handhelds) {
+    width: 100%;
+    height: auto;
+
+    .nav-content {
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding-bottom: 16px;
+    }
+  }
 }
 
 .content {
@@ -118,6 +135,10 @@ body {
   background: $dark-grey;
   display: flex;
   justify-content: center;
+
+  @include respond-to(handhelds) {
+    padding: 0 16px;
+  }
 }
 
 .content-column {

@@ -16,6 +16,15 @@
     margin-top: 0;
     max-width: 450px;
   }
+
+  @include respond-to(handhelds) {
+    margin-bottom: 40px;
+    padding: 0 10px 10px;
+
+    .page-title {
+      font-size: 1.5em;
+    }
+  }
 }
 
 .post-list {
@@ -23,9 +32,14 @@
 
   list-style-type: none;
   width: 730px;
+  max-width: 100%;
   padding: 0;
   display: flex;
   flex-direction: column;
+
+  @include respond-to(handhelds) {
+    width: 100%;
+  }
 
   .posted-at {
     color: white;
@@ -67,6 +81,10 @@
         border-color: transparent transparent white transparent;
         -webkit-transform: rotate(360deg);
       }
+
+      @include respond-to(handhelds) {
+        font-size: 1.5em;
+      }
     }
 
     .subtitle {
@@ -74,6 +92,10 @@
 
       color: $lighter-lighter-grey;
       margin-top: -7px;
+
+      @include respond-to(handhelds) {
+        font-size: 0.95em;
+      }
     }
   }
 }

@@ -8,6 +8,7 @@
   font-size: 20px;
   position: relative;
   width: 730px;
+  max-width: 100%;
 
   padding: 10px 0 30px 30px;
   border-radius: 0 0 4px 4px;
@@ -40,6 +41,37 @@
   .header-content {
     $padding: 12px;
     padding: $padding $padding $padding $padding+190px;
+  }
+
+  @include respond-to(handhelds) {
+    width: 100%;
+    padding: 10px 16px 20px;
+    font-size: 16px;
+    border-radius: 0;
+
+    .name {
+      font-size: 160%;
+      padding: 2px 16px;
+      text-align: left;
+    }
+
+    .hello {
+      font-size: 120%;
+      text-align: left;
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+
+    .me {
+      float: none;
+      margin: 12px auto;
+      display: block;
+      max-width: 150px;
+    }
+
+    .header-content {
+      padding: 12px 16px;
+    }
   }
 }
 
